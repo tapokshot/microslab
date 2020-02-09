@@ -18,7 +18,6 @@ func init() {
 func main() {
     flag.Parse()
 
-
     config := microslab.CreateConfig()
     _, err := toml.DecodeFile(configPath, &config)
     if err != nil {

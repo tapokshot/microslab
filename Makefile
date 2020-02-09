@@ -1,6 +1,6 @@
 .PHONY: build
 build:
-	go build -v ./cmd/mixbot_server
+	go build -v ./cmd/microslab
 
 .PHONY: test
 test:
