@@ -1,4 +1,4 @@
-package microslab
+package server
 
 // Server config
 type Config struct {

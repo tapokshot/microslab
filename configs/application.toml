@@ -1,3 +1,8 @@
 bind_addr = ":8080"
 log_level = "info"
 database_url = "host=localhost dbname=postgres sslmode=disable user=user password=owner"
+
+[searchuser]
+    port = ":5300"
+    log_level = "info"
+    network = "tcp"

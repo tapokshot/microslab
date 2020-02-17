@@ -49,6 +49,7 @@ func (u *User) Save(ctx *gin.Context) {
 }
 
 func (u *User) Update(ctx *gin.Context) {
+
 }
 
 func (u *User) Delete(ctx *gin.Context) {

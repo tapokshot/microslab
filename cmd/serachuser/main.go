@@ -3,7 +3,7 @@ package main
 import (
     "flag"
     "github.com/BurntSushi/toml"
-    "github.com/tapokshot/microslab/internal/app/microslab"
+    "github.com/tapokshot/microslab/internal/app/searchuser"
     "log"
 )
 
@@ -16,17 +16,18 @@ func init() {
 }
 
 func main() {
+    log.Println("Parse config file")
     flag.Parse()
 
-    config := server.CreateConfig()
+    config := searchuser.CreateConfig()
     _, err := toml.DecodeFile(configPath, &config)
     if err != nil {
         log.Fatal(err)
     }
-    launcher := server.New(config)
 
-    if err := launcher.Launch(); err != nil {
+    log.Println("Server startup")
+    server := searchuser.New(config)
+    if err := server.Launch(); err != nil {
         log.Fatal(err)
     }
-
 }

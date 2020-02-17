@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package grpc;
+
+message SearchUserRequest {
+    int64 userId = 1;
+    string phone = 2;
+}
+
+message SearchUserResponse {
+    int64 userId = 1;
+    string city = 2;
+    bool married = 3;
+}
+
+service SearchUser {
+    rpc Search(SearchUserRequest) returns (SearchUserResponse);
+}
